@@ -1,0 +1,101 @@
+@import url('https://fonts.cdnfonts.com/css/60s-scoreboard');
+
+.scoreboard {
+  width: 30%;
+  background-color: #efefef;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  font-family: '60s Scoreboard', sans-serif;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  animation: showCard 400ms ease-out;
+}
+
+.scoreContainer {
+  padding: 10px;
+  background-color: #d4d4d4;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  width: max-content;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.currentScore,
+.highScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.currentScore,
+.highScore > p:first-child {
+  font-size: 18px;
+}
+
+.scoreContainer p {
+  font-size: 28px;
+}
+
+@keyframes showCard {
+  from {
+    opacity: 0;
+    padding: 0;
+  }
+  to {
+    opacity: 1;
+    padding: 10px;
+  }
+}
+@media (max-width: 1920px) {
+  .scoreboard {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 1368px) {
+  .scoreboard {
+    width: 60%;
+    margin: 30px 0;
+  }
+}
+@media (max-width: 800px) {
+  .scoreboard {
+    width: 60%;
+    margin: 30px 0;
+  }
+  .currentScore,
+  .highScore > p:first-child {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .scoreboard {
+    width: 90%;
+    margin: 30px 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  .scoreContainer p {
+    font-size: 40px;
+  }
+  .currentScore,
+  .highScore > p:first-child {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .scoreboard {
+    background-color: #333;
+    color: #efefef;
+    box-shadow: 0 1px 10px 1px rgba(255, 255, 255, 0.2);
+  }
+  .scoreContainer {
+    background-color: #4a4a4a;
+  }
+  .scoreContainer p {
+    font-size: 40px;
+  }
+}
